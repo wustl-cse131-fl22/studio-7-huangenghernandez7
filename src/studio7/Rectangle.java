@@ -44,6 +44,20 @@ public class Rectangle {
 		}
 		
 		public void drawShape() {
-			StdDraw.filledRectangle(0, 0, width/2, length/2);
+			StdDraw.filledRectangle(0.5, 0.5, width/2, length/2);
+		}
+		
+		public static void main (String args[]) {
+			Rectangle r1 = new Rectangle(0.2, 0.3);
+			Rectangle r2 = new Rectangle(8, 15);
+			Rectangle r3 = new Rectangle(8, 8);
+			
+			System.out.println("Area: " + r1.getArea());
+			System.out.println("Perimeter: " + r1.getPerimeter());
+			System.out.println("Smaller Than: " + r1.smallerRectangle(r2));
+			System.out.println("isSquare: " + r1.isSquare());
+			System.out.println("isSquare (true): " + r3.isSquare());
+			r1.drawShape();
+			
 		}
 }
